@@ -1,0 +1,32 @@
+@use "@scss/extenders" as *;
+@use "@scss/colors" as *;
+
+.sidebar {
+  display           : grid;
+  grid-template-rows: auto 1fr;
+  border-right      : 2px solid $borderColor;
+  position          : relative;
+  grid-area         : sidebar;
+
+  & > ul {
+    @extend .interactiveUl;
+      // padding        : 15px;
+    border: none;
+    
+    &:last-of-type {
+      border-top: 2px solid $borderColor;
+      overflow-Y: auto;
+    }
+    
+    li {
+      margin   : .5rem 0 .5rem 1rem;
+      font-size: 1.2rem;
+      cursor   : pointer;
+    }
+  
+  }
+
+  // button {
+  // @extend .buttonAction;
+  // }
+}

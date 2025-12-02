@@ -1,0 +1,9 @@
+{
+  "conventionalCommits.scopes": [
+    "front",
+    "back"
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#009c7a"
+  }
+}

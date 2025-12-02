@@ -1,0 +1,41 @@
+@use "@scss/colors" as *;
+
+nav.header {
+  grid-area       : mainNav;
+  display         : flex;
+  background-color: $lightBgColor;
+  width           : 100vw;
+  border-bottom   : $borderColor solid 2px;
+
+  button {
+    border-radius: .5rem;
+    padding      : 15px 20px;
+    border-right : 1px solid $borderColor;
+    cursor       : unset;
+    text-align   : center;
+    transition   : background-color 0.3s ease;
+    margin       : 0 .5rem;
+    align-self   : center;
+
+    &[aria-pressed="true"] {
+      background-color: $darkBgColor;
+      border          : $borderColor 2px solid;
+      font-weight     : bold;
+      color           : $lightTextColor;
+    }
+
+    &[aria-pressed="false"] {
+      background-color: transparent;
+      color           : $unfocusedTextColor;
+      border          : $borderColor 1px solid;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}

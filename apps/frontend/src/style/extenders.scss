@@ -1,0 +1,23 @@
+@use "@scss/colors" as *;
+
+.buttonAction {
+  position        : absolute;
+  bottom          : 1rem;
+  right           : 1rem;
+  padding         : 1rem;
+  display         : flex;
+  justify-content : center;
+  background-color: $darkBgColor;
+  width           : fit-content;
+  border-radius   : .5rem;
+  border          : 2px solid $borderColor;
+  color           : $lightTextColor;
+  font-weight     : bold;
+  cursor          : pointer;
+}
+
+.interactiveUl { 
+  padding        : 0;
+  margin         : 0;
+  list-style-type: none;
+}

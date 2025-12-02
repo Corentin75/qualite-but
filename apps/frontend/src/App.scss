@@ -1,0 +1,25 @@
+@use "@scss/colors" as *;
+
+
+#root {
+  display: grid;
+  height : 100vh;
+  margin : 0;
+  grid   : "mainNav" 4rem
+         "content" auto
+         / 1fr;
+  background-color: $mainBgColor;
+}
+
+body {
+  margin     : 0;
+  display    : flex;
+  place-items: center;
+  min-width  : 320px;
+  min-height : 100vh;
+  color      : $defaultTextColor;
+}
+
+.contentArea{
+  grid-area: content;
+}

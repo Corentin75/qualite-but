@@ -1,0 +1,29 @@
+@use "@scss/colors" as *;
+@use "@scss/extenders" as *;
+
+.buttonMulti {
+  height: auto;
+
+  ul {
+    @extend .interactiveUl;
+  }
+
+  li {
+    text-align: justify;
+    margin    : 0.5rem 0;
+
+    input {
+      display: none;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  span {
+    padding-left: 1rem;
+    margin-left : 1rem;
+    border-left : 1px solid $defaultTextColor;
+  }
+}

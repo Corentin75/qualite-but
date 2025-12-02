@@ -1,0 +1,25 @@
+@use "@scss/extenders" as *;
+@use "@scss/colors" as *;
+
+main[data-page="emailsPage"] {
+  display: grid;
+  grid   : "sidebar emailContent" 1fr
+         "sidebar emailResponse" 1fr
+         / 1fr 4fr;
+    // height: calc(100vh - 4rem);
+
+  &>article {
+      // padding: 30px;
+    &:first-of-type {
+      grid-area    : emailContent;
+      border-bottom: $borderColor solid 2px;
+    }
+    &:last-of-type {
+      grid-area: emailResponse;
+    }
+  }
+
+  button {
+    @extend .buttonAction;
+  }
+}
